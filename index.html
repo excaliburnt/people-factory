@@ -6,41 +6,39 @@
     <title>People Factory</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="index.css" type = "text/css" rel = "stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
     <h1>a Factory of People</h1>
 
     <section>
-      <div class="special">
+      <div>
         <form id="personForm">
           <p>
             <label for="personName">Name</label>
             <input type="text" name="personName">
-            </p>
+          </p>
 
-            <p>
-            <label for="personAge">Age</label>
-            <input type="text" name="personAge">
-            </p>
+          <p>
+            <label for="favoriteColor">Favorite Color</label>
+            <input type="color" name="favoriteColor">
+          </p>
 
-            <p>
-            <label for="favColor">Color</label>
-            <input type="text" name = "favColor"
-            <p/>
+          <p>
+            <label for="age">Age</label>
+            <input type="number" name="age">
+          </p>
 
-            <p>
+          <p>
             <button type="submit">Go</button>
           </p>
-         </form>
-        </div>
-
-      <div id="details">
+        </form>
       </div>
+
+      <div id="details"></div>
     </section>
 
-<h2> Favorite color <h2>
     <script src="index.js"></script>
   </body>
 </html>

@@ -1,18 +1,30 @@
-const personForm = document.querySelector('#personForm') // Creates var personForm. It returns form elements 
+const personForm = document.querySelector('#personForm')
+
+
 
 function handleSubmit(ev) {
-  ev.preventDefault() //Stops the default action happening
-  const f = ev.target //says which DOM element triggered the event
-  const heading = document.querySelector('h1')
-  heading.textContent = f.personName.value + " is " +  f.personAge.value + " years old." //Returns the content of a specefied node
-  const paragraph = document.querySelector('h2')
-  paragraph.textContent = "Favorite Color is " + f.favColor.value 
-const details = document=document.querySelector('#details')
-//const name = f.personName.value
+  ev.preventDefault()
+  const f = ev.target
+  const details = document.querySelector('#details')
+  const name = f.personName.value
+  const favoriteColor = f.favoriteColor.value
+  const age = f.age.value
 
-//details.innerHTML += '<strong'> + name + '<.strong>'
+  const colorDiv = `
+    <div style="background-color: ${favoriteColor}; width: 100px; height: 50px;"></div>
+  `
+  
+  // const boldedName = document.createElement('strong')
+  // boldedName.textContent = name
+  // details.appendChild(boldedName)
+
+  details.innerHTML = `
+    <ul>
+      <li>Name: ${name}</li>
+      <li>Favorite Color: ${colorDiv}</li>
+      <li>Age: ${age}</li>
+    </ul>
+  `
 }
 
-  
-
-personForm.addEventListener('submit', handleSubmit) //Adds event to to the button, 'submit'
+personForm.addEventListener('submit', handleSubmit)
