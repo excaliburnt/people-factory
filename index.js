@@ -7,6 +7,10 @@ function handleSubmit(ev) {
   heading.textContent = f.personName.value + " is " +  f.personAge.value + " years old." //Returns the content of a specefied node
   const paragraph = document.querySelector('h2')
   paragraph.textContent = "Favorite Color is " + f.favColor.value 
+const details = document=document.querySelector('#details')
+//const name = f.personName.value
+
+//details.innerHTML += '<strong'> + name + '<.strong>'
 }
 
   
